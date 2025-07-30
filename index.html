@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MDD Food | Home of Delicious Dining</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/animate.css" />
+  <link rel="stylesheet" href="css/owl.carousel.css" />
+  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="css/magnific-popup.css" />
+  <link rel="stylesheet" href="css/templatemo-style.css" />
+  
+  <style>
+    :root {
+      --primary-color: #FF6B6B;
+      --secondary-color: #4ECDC4;
+      --accent-color: #FFE66D;
+      --dark-color: #292F36;
+      --light-color: #F7FFF7;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--light-color);
+    }
+    
+    .navbar {
+      background-color: var(--dark-color) !important;
+    }
+    
+    .navbar-brand {
+      color: var(--accent-color) !important;
+      font-weight: 700;
+      font-size: 24px;
+    }
+    
+    .slider {
+      background: linear-gradient(rgba(41, 47, 54, 0.7), rgba(41, 47, 54, 0.7)), url('images/menu-image1.jpg');
+      background-size: cover;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .section-btn {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    
+    .section-btn:hover {
+      background-color: var(--accent-color);
+      color: var(--dark-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .intro-section {
+      background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+      color: white;
+    }
+    
+    .menu-preview .card {
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: all 0.3s;
+      background-color: white;
+    }
+    
+    .menu-preview .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    
+    .menu-preview .card-body {
+      padding: 20px;
+    }
+    
+    .menu-preview .card h4 {
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+    
+    footer {
+      background-color: var(--dark-color);
+      color: white;
+      padding: 50px 0 20px;
+    }
+    
+    footer h2 {
+      color: var(--accent-color);
+    }
+    
+    footer a {
+      color: var(--secondary-color);
+      transition: color 0.3s;
+    }
+    
+    footer a:hover {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+    
+    .section-title h2 {
+      color: var(--dark-color);
+      position: relative;
+      display: inline-block;
+      padding-bottom: 15px;
+    }
+    
+    .section-title h2:after {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 3px;
+      background: var(--primary-color);
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon icon-bar"></span>
+        <span class="icon icon-bar"></span>
+        <span class="icon icon-bar"></span>
+      </button>
+      <a href="index.html" class="navbar-brand">MDD Food</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-nav-first">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- HERO SLIDER -->
+<section id="home" class="slider" data-stellar-background-ratio="0.5" style="background-image: url('images/menu-image1.jpg'); background-size: cover;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-12">
+        <div class="home-info">
+          <h1 class="wow fadeInUp" data-wow-delay="0.5s">Welcome to <strong>MDD Food</strong></h1>
+          <p class="wow fadeInUp" data-wow-delay="0.8s">Where flavor meets freshness. Enjoy curated meals, family favorites, and exceptional service.</p>
+          <a href="#menu" class="btn section-btn smoothScroll">Explore Menu</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO SECTION -->
+<section class="intro-section">
+  <div class="container">
+    <h2 class="wow fadeInUp">Delicious Moments Await</h2>
+    <p class="wow fadeInUp" data-wow-delay="0.3s">
+      Discover the story behind our flavors, passion for food, and dedication to quality service.
+    </p>
+    <a href="about.html" class="btn btn-primary btn-lg mt-4 wow fadeInUp" data-wow-delay="0.6s">Learn More About Us</a>
+  </div>
+</section>
+
+<!-- MENU PREVIEW SECTION -->
+<section id="menu" class="menu-preview">
+  <div class="container">
+    <div class="section-title text-center wow fadeInUp">
+      <h2>Our Specialties</h2>
+      <p>Hand-picked dishes our guests love the most</p>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-md-4 col-sm-6">
+        <div class="card wow fadeInUp" data-wow-delay="0.2s">
+          <img src="images/menu-image2.jpg" class="img-responsive" alt="Dish 1">
+          <div class="card-body">
+            <h4>Grilled Chicken</h4>
+            <p>Succulent chicken grilled to perfection with herbs & spices.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="card wow fadeInUp" data-wow-delay="0.4s">
+          <img src="images/menu-image3.jpg" class="img-responsive" alt="Dish 2">
+          <div class="card-body">
+            <h4>Veggie Delight</h4>
+            <p>A colorful medley of fresh vegetables and flavorful dressing.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="card wow fadeInUp" data-wow-delay="0.6s">
+          <img src="images/menu-image4.jpg" class="img-responsive" alt="Dish 3">
+          <div class="card-body">
+            <h4>Spicy Beef Curry</h4>
+            <p>Aromatic beef simmered in spicy curry sauce served with rice.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer id="footer" data-stellar-background-ratio="0.5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-8">
+        <div class="footer-info">
+          <h2>MDD Food</h2>
+          <p>Delighting your taste buds with the best of local and international cuisines.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-8">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-sm-8">
+        <h2>Contact</h2>
+        <p>Email: info@mddfood.com<br>Phone: +254 700 123456</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/custom.js"></script>
+
+<script>
+  new WOW().init();
+</script>
+
+</body>
+</html>
