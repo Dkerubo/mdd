@@ -8,46 +8,241 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/templatemo-style.css">
   <style>
+    :root {
+      --primary-color: #FF6B6B; /* Vibrant coral */
+      --secondary-color: #4ECDC4; /* Fresh teal */
+      --accent-color: #FFE66D; /* Sunny yellow */
+      --dark-color: #292F36; /* Dark slate */
+      --light-color: #F7FFF7; /* Mint cream */
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--light-color);
+    }
+    
+    /* Header with gradient */
+    .navbar {
+      background: linear-gradient(135deg, var(--dark-color), #3a4750) !important;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-brand {
+      color: var(--accent-color) !important;
+      font-weight: 700;
+      font-size: 24px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+    
+    /* Contact Hero Section */
+    .contact-hero {
+      background: linear-gradient(rgba(41, 47, 54, 0.85), rgba(41, 47, 54, 0.85)), 
+                  url('images/menu-image1.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    
+    .contact-hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--accent-color);
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .contact-hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+    
+    /* Contact Content Section */
     .contact-section {
       padding: 80px 0;
+      background-color: white;
     }
+    
     .contact-info {
-      background: #f9f9f9;
-      padding: 30px;
-      border-radius: 8px;
+      background: linear-gradient(135deg, var(--secondary-color), #88d8c0);
+      padding: 40px;
+      border-radius: 15px;
+      color: white;
       height: 100%;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
+    
+    .contact-info h3 {
+      color: var(--accent-color);
+      font-weight: 700;
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .contact-info h3:after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background: var(--accent-color);
+      bottom: 0;
+      left: 0;
+    }
+    
     .contact-info i {
       font-size: 24px;
-      color: #d65106;
+      color: var(--accent-color);
       margin-right: 15px;
+      width: 30px;
+      text-align: center;
     }
-    .contact-form {
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    
+    .contact-info p, .contact-info li {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
     }
-    .contact-form .form-control {
-      height: 50px;
-      margin-bottom: 20px;
-    }
-    .contact-form textarea.form-control {
-      height: 150px;
-    }
-    .map-container {
-      height: 400px;
-      margin-top: 40px;
-      border-radius: 8px;
-      overflow: hidden;
-    }
+    
     .hours-list {
       list-style: none;
       padding: 0;
     }
+    
     .hours-list li {
-      padding: 8px 0;
-      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    .hours-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .social-icons a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      margin-right: 10px;
+      transition: all 0.3s;
+    }
+    
+    .social-icons a:hover {
+      background: var(--accent-color);
+      color: var(--dark-color);
+      transform: translateY(-3px);
+    }
+    
+    /* Contact Form */
+    .contact-form {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      height: 100%;
+    }
+    
+    .contact-form h3 {
+      color: var(--primary-color);
+      font-weight: 700;
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .contact-form h3:after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background: var(--primary-color);
+      bottom: 0;
+      left: 0;
+    }
+    
+    .form-control {
+      height: 50px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      padding-left: 20px;
+      transition: all 0.3s;
+    }
+    
+    .form-control:focus {
+      border-color: var(--secondary-color);
+      box-shadow: 0 0 0 0.2rem rgba(78, 205, 196, 0.25);
+    }
+    
+    textarea.form-control {
+      height: 150px;
+      padding-top: 15px;
+    }
+    
+    .btn-submit {
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .btn-submit:hover {
+      background: var(--accent-color);
+      color: var(--dark-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    /* Map Section */
+    .map-container {
+      height: 400px;
+      margin-top: 60px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      border: 10px solid white;
+    }
+    
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, var(--dark-color), #3a4750);
+      color: white;
+      padding: 50px 0 20px;
+    }
+    
+    footer h2 {
+      color: var(--accent-color);
+      margin-bottom: 20px;
+    }
+    
+    footer a {
+      color: var(--secondary-color);
+      transition: color 0.3s;
+    }
+    
+    footer a:hover {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+    
+    .footer-info p {
+      opacity: 0.8;
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+      margin-top: 30px;
     }
   </style>
 </head>
@@ -74,17 +269,20 @@
   </div>
 </section>
 
+<!-- CONTACT HERO -->
+<section class="contact-hero">
+  <div class="container">
+    <h1 class="wow fadeInDown">Contact Us</h1>
+    <p class="wow fadeInUp" data-wow-delay="0.3s">We'd love to hear from you! Reach out for reservations, questions, or just to say hello.</p>
+  </div>
+</section>
+
 <!-- CONTACT SECTION -->
 <section class="contact-section">
   <div class="container">
-    <div class="section-title text-center">
-      <h2>Get In Touch</h2>
-      <p>We'd love to hear from you! Reach out for reservations, questions, or feedback.</p>
-    </div>
-
-    <div class="row mt-5">
+    <div class="row">
       <div class="col-md-5">
-        <div class="contact-info">
+        <div class="contact-info wow fadeInLeft">
           <h3>Contact Information</h3>
           <p><i class="fa fa-map-marker"></i> 123 Food Street, Nairobi, Kenya</p>
           <p><i class="fa fa-phone"></i> +254 700 123456</p>
@@ -98,15 +296,15 @@
           </ul>
           
           <div class="social-icons mt-4">
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a>
+            <a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.4s"></a>
+            <a href="#" class="fa fa-instagram wow fadeIn" data-wow-delay="0.5s"></a>
           </div>
         </div>
       </div>
       
       <div class="col-md-7">
-        <div class="contact-form">
+        <div class="contact-form wow fadeInRight">
           <h3>Send Us a Message</h3>
           <form id="contactForm">
             <div class="row">
@@ -119,7 +317,7 @@
             </div>
             <input type="text" class="form-control" placeholder="Subject">
             <textarea class="form-control" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            <button type="submit" class="btn btn-submit">Send Message</button>
           </form>
         </div>
       </div>
@@ -127,7 +325,7 @@
     
     <div class="row">
       <div class="col-md-12">
-        <div class="map-container">
+        <div class="map-container wow fadeInUp" data-wow-delay="0.4s">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.808559559897!2d36.82115931475391!3d-1.2883858359807726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d664f5e5c9%3A0x1e3b9b7a8a6b5c1d!2sNairobi%20City%20Centre%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1620000000000!5m2!1sen!2ske" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
@@ -159,7 +357,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12 text-center">
+      <div class="col-md-12 text-center footer-bottom">
         <p>&copy; 2025 MDD Food. All rights reserved.</p>
       </div>
     </div>
@@ -169,7 +367,12 @@
 <!-- JS -->
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
 <script src="js/custom.js"></script>
+
+<script>
+  new WOW().init();
+</script>
 
 </body>
 </html>
