@@ -1,146 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>About Us | MDD Food</title>
+  <title>About Us | MDD Food</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/templatemo-style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-color: #FF6B6B;
-      --secondary-color: #4ECDC4;
-      --accent-color: #FFE66D;
-      --dark-color: #292F36;
-      --light-color: #F7FFF7;
+      --primary: #FF6B6B; /* Vibrant coral */
+      --secondary: #4ECDC4; /* Fresh teal */
+      --accent: #FFE66D; /* Sunny yellow */
+      --dark: #292F36; /* Dark slate */
+      --light: #F7FFF7; /* Mint cream */
+      --text: #5E6E82; /* Soft gray for text */
     }
     
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--dark);
+      background-color: var(--light);
+    }
+    
+    /* Header */
+    .navbar {
+      background: linear-gradient(135deg, var(--dark), #3a4750) !important;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-brand {
+      color: var(--accent) !important;
+      font-weight: 700;
+      font-size: 24px;
+    }
+    
+    /* Hero Section */
     .about-hero {
-      background: linear-gradient(rgba(41, 47, 54, 0.8), rgba(41, 47, 54, 0.8)), url('images/footer-open-hour-bg.jpg');
+      background: linear-gradient(rgba(41, 47, 54, 0.85), rgba(41, 47, 54, 0.85)), 
+                  url('images/footer-open-hour-bg.jpg');
       background-size: cover;
       background-position: center;
       color: white;
-      padding: 150px 0;
+      padding: 120px 0;
       text-align: center;
+      position: relative;
     }
     
     .about-hero h1 {
       font-size: 3.5rem;
       font-weight: 700;
       margin-bottom: 20px;
-      color: var(--accent-color);
+      color: var(--accent);
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      animation: fadeInDown 1s ease;
     }
     
+    .about-hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.9;
+      animation: fadeInUp 1s ease 0.3s both;
+    }
+    
+    /* About Content */
     .about-content {
       padding: 80px 0;
       background-color: white;
     }
     
     .about-content h2 {
-      color: var(--primary-color);
+      color: var(--primary);
       font-weight: 700;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
+      position: relative;
+      display: inline-block;
     }
     
-    .team-section {
-      padding: 80px 0;
-      background-color: var(--light-color);
+    .about-content h2:after {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 4px;
+      background: var(--secondary);
+      bottom: -10px;
+      left: 0;
     }
     
-    .team-card {
-      background: white;
-      border-radius: 10px;
-      padding: 30px;
-      text-align: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      transition: all 0.3s;
-      margin-bottom: 30px;
-    }
-    
-    .team-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    }
-    
-    .team-card img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-      border: 5px solid var(--secondary-color);
-    }
-    
-    .team-card h3 {
-      color: var(--dark-color);
-      font-weight: 700;
-    }
-    
-    .values-section {
-      padding: 80px 0;
-      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-      color: white;
-    }
-    
-    .value-card {
-      background: rgba(255,255,255,0.1);
-      padding: 30px;
-      border-radius: 10px;
-      text-align: center;
-      backdrop-filter: blur(5px);
-      transition: all 0.3s;
-      height: 100%;
-    }
-    
-    .value-card:hover {
-      transform: scale(1.05);
-      background: rgba(255,255,255,0.2);
-    }
-    
-    .value-card i {
-      font-size: 3rem;
-      color: var(--accent-color);
+    .about-content p {
+      color: var(--text);
+      line-height: 1.8;
       margin-bottom: 20px;
     }
     
-    .value-card h3 {
-      font-weight: 700;
-      margin-bottom: 15px;
-    }
-    
-    .menu-preview {
+    /* Menu Preview */
+    .menu-section {
       padding: 80px 0;
-      background-color: white;
+      background-color: var(--light);
     }
     
-    .menu-item {
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .section-title h2 {
+      color: var(--dark);
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 15px;
+    }
+    
+    .section-title h2:after {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .menu-card {
       background: white;
-      border-radius: 10px;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      transition: all 0.3s;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: all 0.4s ease;
       margin-bottom: 30px;
     }
     
-    .menu-item:hover {
+    .menu-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
     }
     
-    .menu-item img {
+    .menu-img {
       width: 100%;
       height: 200px;
       object-fit: cover;
     }
     
-    .menu-item-content {
-      padding: 20px;
+    .menu-details {
+      padding: 25px;
     }
     
-    .menu-item h4 {
-      color: var(--primary-color);
+    .menu-details h4 {
+      color: var(--primary);
       font-weight: 700;
+      margin-bottom: 10px;
+    }
+    
+    .menu-details p {
+      color: var(--text);
+      margin-bottom: 15px;
+    }
+    
+    .menu-link {
+      color: var(--secondary);
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      transition: all 0.3s;
+    }
+    
+    .menu-link:hover {
+      color: var(--primary);
+      transform: translateX(5px);
+    }
+    
+    .menu-link i {
+      margin-left: 5px;
+      transition: all 0.3s;
+    }
+    
+    /* Features Section */
+    .features-section {
+      padding: 80px 0;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+    }
+    
+    .feature-card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(5px);
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      height: 100%;
+      transition: all 0.4s;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      background: rgba(255,255,255,0.15);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .feature-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+    }
+    
+    .feature-icon img {
+      max-width: 50px;
+      filter: brightness(0) invert(1);
+    }
+    
+    .feature-card h3 {
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: var(--accent);
+    }
+    
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .about-hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .about-hero {
+        padding: 80px 0;
+      }
     }
   </style>
 </head>
@@ -167,120 +283,167 @@
   </div>
 </section>
 
-<!-- ABOUT CONTENT PLACEHOLDER -->
-<section style="padding: 100px 20px; text-align: center;">
-  <h1 style="background-image: url(images/footer-open-hour-bg.jpg);
-  background-position:center;
-  background-repeat: no-repeat;
-  background-size:cover;
-  padding: 200px;">About Us</h1>
-  <p style="align-items: center;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero dignissimos vitae hic corporis  quo assumenda voluptatum, rerum molestias <br> ex reprehenderit non quis rem quidem sint! Lorem ipsum <br> dolor sit amet consectetur, adipisicing elit. Saepe sapiente facere reiciendis exercitationem aut fuga?</p>
+<!-- HERO SECTION -->
+<section class="about-hero">
+  <div class="container">
+    <h1>Our Culinary Journey</h1>
+    <p>Discover the passion, tradition, and innovation behind MDD Food's exceptional dining experience</p>
+  </div>
 </section>
 
-<main>
-  <center><h1 style="font-family: 'Montserrat', sans-serif;">Browse Our Menu</h1></center>
-  
-  <center style="padding-left: 200px;">
-    <div class="menus" style="display: flex;padding: 19px 10px; gap: 100px;" >
-       <div class="menu-1" style="padding: 10px 30px;text-align: center; border: 2px solid rgb(90, 87, 87); border-radius:5px; transition: 0.3s ease-in-out;">
-       <img src="images/How to make Nigerian Fried Rice Recipe.jpeg" alt="" style="width: 150px; border-radius: 5px;"> <br>
-       <p style="font-size: 15px; font-weight: 800;">Fried Rice With Vegies</p>
-       <p>Lorem ipsum dolor sit amet<br>consectetur  adipisicing elit. <br> Qui ullam sapiente id ut.</p>
-       <hr>
-       See More->
+<!-- ABOUT CONTENT -->
+<section class="about-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Our Story</h2>
+        <p>Founded in 2010, MDD Food began as a small family-owned restaurant with a simple mission: to serve delicious, authentic meals made with love. What started as a humble kitchen has blossomed into Nairobi's premier dining destination, known for its innovative fusion of local flavors and international techniques.</p>
+        <p>Our founder, Chef Michael Daudi, envisioned a place where quality ingredients meet creative culinary artistry. Today, we continue this tradition, sourcing the freshest local produce while maintaining our commitment to exceptional service and unforgettable dining experiences.</p>
       </div>
-      <style>
-       .menu-1:hover{
-          background-color: rgb(90, 87, 87);
-         color: white;
-         transform: scale(1.05);
-         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-       }
-        .menu-2:hover{
-         background-color: rgb(90, 87, 87);
-         color: white;
-         transform: scale(1.05);
-         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-       .menu-3:hover{
-         background-color: rgb(90, 87, 87);
-         color: white;
-         transform: scale(1.05);
-         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-       }
-      </style>
-      <div class="menu-2" style="padding: 10px 15px;text-align: center; border: 2px solid rgb(90, 87, 87); border-radius:5px; transition: 0.3s ease-in-out">
-        <img src="images/_ (2).jpeg" alt="" style="width: 150px; height: 150px; border-radius: 5px;"> <br>
-        <p style="font-size: 14px; font-weight: 800;">Fried Potatoes with Fried Eggs</p>
-        <p>Lorem ipsum dolor sit amet <br>consectetur  adipisicing elit.<br> Qui ullam sapiente id ut.</p>
-        <hr>
-        See More->
-      </div>
-      <div class="menu-3" style="padding: 9.5px 30px;text-align: center; border: 2px solid rgb(90, 87, 87); border-radius:5px;transition: 0.3s ease-in-out">
-       <img src="images/Sauce gousse et piron.jpeg" alt="" style="width: 150px; height: 130px; border-radius: 5px;"> <br>
-        <p style="font-size: 15px; font-weight: 800;">Egusi With Eba</p>
-       <p>Lorem ipsum dolor sit amet<br>consectetur  adipisicing elit. <br>Qui ullam sapiente id ut.</p>
-        <hr>
-        See More->
-      </div>
-
-
-    </div>
-  </center>
-</main>
-
-<!-- SUB-SECTION -->
-
-<div class="Sub-section" style="padding:  50px 50px;">
-  <center>
-    <div class="text">
-      <h4 style="font-size: 50px ; font-family: 'Montserrat', sans-serif;">What We Do</h4>
-    </div>
-
-    <div class="DO" style="display: flex; gap: 30px; padding-left: 20px;" >
-
-      <div class="Do-1" style="text-align: center;">
-        <img src="images/_ (3).jpeg" alt="" style="width: 65px; "> <br>
-        <p style="font-size: 20px; font-weight: 800;">Fresh Products</p>
-        <p>Lorem ipsum dolor sit amet consectetur<br>adipisicing elit Provident numquam?</p>
-      </div>
-
-      <style>
-        .Do-1, .Do-2, .Do-3, .Do-4{
-          border: 2px solid rgb(90, 87, 87);
-          padding: 20px 23px;
-          border-radius: 5px;
-        }
-      </style>
-
-      <div class="Do-2">
-        <img src="images/Chef Icon Set - Culinary Professionals vector image on VectorStock.jpeg" alt="" style="width: 80px; ">
-        <p style="font-size: 20px; font-weight: 800;">Skilled Chefs</p>
-        <p>Lorem ipsum dolor sit amet consectetur<br> adipisicing elit Provident numquam?</p>
-      </div>
-
-      <div class="Do-3">
-        <img src="images/Free a cocktail glass SVG.jpeg" alt="" style="width: 65px;"> <br>
-        <p style="font-size: 20px; font-weight: 800;">Best bar</p>
-        <p>Lorem ipsum dolor sit amet consectetur<br>adipisicing elit Provident numquam?</p>
-      </div>
-
-      <div class="Do-4">
-        <img src="images/Restaurant Logo Design Ideas for Your Brand - Karen Johsnon.jpeg" alt="" style="width: 65px; "> <br>
-        <p style="font-size: 20px; font-weight: 800;">Vegan Cuisine</p>
-        <p>Lorem ipsum dolor sit amet consectetur<br>adipisicing elit Provident numquam?</p>
+      <div class="col-md-6">
+        <img src="https://media.istockphoto.com/id/2147698913/photo/large-mid-century-styled-restaurant-bar-with-tables-and-chairs-stools-benches-ceiling.webp?s=1024x1024&w=is&k=20&c=RxuiacKUGsyPNjVG2CjjMwU4KKjzgTqihQFWgsaYOMk=" alt="MDD Food Restaurant" class="img-fluid rounded-lg shadow">
       </div>
     </div>
-  </center>
-</div>
+  </div>
+</section>
 
+<!-- MENU PREVIEW -->
+<section class="menu-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Signature Dishes</h2>
+      <p class="text-muted">Handcrafted favorites that define our culinary identity</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-4">
+        <div class="menu-card">
+          <img src="images/How to make Nigerian Fried Rice Recipe.jpeg" alt="Fried Rice With Veggies" class="menu-img">
+          <div class="menu-details">
+            <h4>Fried Rice With Veggies</h4>
+            <p>Our signature fried rice bursting with fresh vegetables and aromatic spices, cooked to perfection with a special blend of seasonings.</p>
+            <a href="#" class="menu-link">See More <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="menu-card">
+          <img src="images/_ (2).jpeg" alt="Fried Potatoes with Fried Eggs" class="menu-img">
+          <div class="menu-details">
+            <h4>Fried Potatoes with Eggs</h4>
+            <p>Crispy golden potatoes paired with perfectly fried eggs, seasoned with our special house blend of herbs and spices.</p>
+            <a href="#" class="menu-link">See More <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="menu-card">
+          <img src="images/Sauce gousse et piron.jpeg" alt="Egusi With Eba" class="menu-img">
+          <div class="menu-details">
+            <h4>Egusi With Eba</h4>
+            <p>A traditional favorite featuring rich egusi soup made from melon seeds, served with smooth eba for an authentic taste experience.</p>
+            <a href="#" class="menu-link">See More <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="features-section">
+  <div class="container">
+    <div class="section-title">
+      <h2 style="color: white;">What Makes Us Special</h2>
+      <p style="opacity: 0.8;">The MDD Food difference goes beyond just great food</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="images/_ (3).jpeg" alt="Fresh Products">
+          </div>
+          <h3>Fresh Ingredients</h3>
+          <p>We source only the freshest local produce and highest quality ingredients for every dish.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-3 col-sm-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="images/Chef Icon Set - Culinary Professionals vector image on VectorStock.jpeg" alt="Skilled Chefs">
+          </div>
+          <h3>Expert Chefs</h3>
+          <p>Our culinary team brings decades of combined experience from around the world.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-3 col-sm-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="images/Free a cocktail glass SVG.jpeg" alt="Best Bar">
+          </div>
+          <h3>Craft Cocktails</h3>
+          <p>Enjoy innovative drinks made with premium spirits and fresh ingredients.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-3 col-sm-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="images/Restaurant Logo Design Ideas for Your Brand - Karen Johsnon.jpeg" alt="Vegan Options">
+          </div>
+          <h3>Vegan Options</h3>
+          <p>Delicious plant-based creations that satisfy even the most discerning palates.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer id="footer">
   <div class="container">
-    <p style="text-align: center;">&copy; 2025 MDD Food. All rights reserved.</p>
+    <div class="row">
+      <div class="col-md-4 col-sm-8">
+        <div class="footer-info">
+          <h2>MDD Food</h2>
+          <p>Delighting your taste buds with the best of local and international cuisines.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-8">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-sm-8">
+        <h2>Contact</h2>
+        <p>Email: info@mddfood.com<br>Phone: +254 700 123456</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p>&copy; 2025 MDD Food. All rights reserved.</p>
+      </div>
+    </div>
   </div>
 </footer>
+
+<!-- JS -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+
+<script>
+  new WOW().init();
+</script>
 
 </body>
 </html>
